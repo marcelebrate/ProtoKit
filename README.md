@@ -1,5 +1,4 @@
-# Prototyping Framework Documentation
-*Updated 2017-02-22*
+# ProtoKit Prototyping Framework
 
 --------------------------------------------------------------------------------
 
