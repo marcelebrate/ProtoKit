@@ -9,16 +9,10 @@ The prototyping library is a TypeScript/Angular-based JavaScript library to ease
 ## Feature Backlog
 
 * Add authentication
-* Create image preloader @done
 * Add expiration
 * Custom background colors for hotspots when active
 * Define custom animations
 * Add delays between screen (with loader)
-* Screen states @done
-
-## Known Issues
-
-* Browser forward button shows back animation
 
 ## Requirements
 
