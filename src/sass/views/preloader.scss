@@ -1,0 +1,70 @@
+#preloader
+{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	background: $color-background;
+
+	z-index: 999999;
+
+	.loaderContainer
+	{
+		@include vertical-align(absolute);
+		@include horizontal-align(absolute);
+
+		display: none;
+
+		color: #fff;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.loader
+	{
+		margin: .5rem auto;
+		width: 8rem;
+		height: .5rem;
+		background: rgba(255,255,255,.1);
+		border: 1px solid rgba(255,255,255,.15);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.progress-bar
+	{
+		height: inherit;
+		width: 0%;
+		position: relative;
+
+		-webkit-transition: all 200ms ease;
+		transition: all 200ms ease;
+	}
+
+	.progress-percent
+	{
+		color: #444;
+		position: absolute;
+		line-height: 1rem;
+		right: .2rem;
+		font-size: .3rem;
+	}
+
+	.progress-bar
+	{
+		background: #fff;
+	}
+	.percentage
+	{
+		color: #ccc;
+	}
+
+	h2
+	{
+		font-size: .8rem;
+		color: #666;
+	}
+
+}

@@ -1,0 +1,48 @@
+.modal
+{
+	height: 100%;
+	left: 0;
+	margin: 0 auto;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: $z-modal;
+
+	background: #000;
+	visibility: hidden;
+	opacity: 0;
+
+	.hotspot:active
+	{
+		background: #000;
+		opacity: .4 !important;
+		border: none;
+		border-radius: 0;
+	}
+
+	.scrollWrapper
+	{
+		//position: absolute;
+		//top: 0;
+
+		//height: 101%;
+		//width: 100%;
+
+		margin: 0 auto;
+
+
+		//overflow-y: auto;
+		//-webkit-overflow-scrolling: touch;
+
+		.content
+		{
+			position: relative;
+		}
+	}
+
+	.screenshot
+	{
+		//width: 100%;
+	}
+}

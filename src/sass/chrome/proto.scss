@@ -1,0 +1,82 @@
+.hotspot
+{
+	position: absolute;
+
+	box-sizing: border-box;
+	display: block;
+	margin: 0;
+	padding: 0;
+
+	background: rgba(0, 153, 255, .4);
+	border: 3px solid #09f;
+	border-radius: 5px;
+	opacity: 0;
+
+	cursor: pointer;
+}
+
+.pk-touch-cursor
+{
+	width: 2rem;
+	height: 2rem;
+
+	background: rgba(255,255,255,.3);
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: 10rem;
+
+	position: absolute;
+
+	z-index: $z-cursor;
+}
+
+.screen .hotspot
+{
+	z-index: $z-hotspot + $z-screen;
+}
+.navbar .hotspot
+{
+	z-index: $z-hotspot + $z-navbar;
+}
+.modal .hotspot
+{
+	z-index: $z-hotspot + $z-modal;
+}
+
+
+.proto-webappInstruction
+{
+	//display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	background: rgba(0,0,0,.8);
+	z-index: 9999;
+
+	.content
+	{
+		background: #fff;
+		border: .5rem solid #ccc;
+
+		@include vertical-align();
+		margin: 0 auto;
+
+		margin: 1rem;
+		max-width: 40rem;
+		padding: 1rem;
+
+		ol
+		{
+			list-style: decimal;
+			margin-left: 1rem;
+		}
+	}
+
+	.dismissButton
+	{
+
+	}
+
+}

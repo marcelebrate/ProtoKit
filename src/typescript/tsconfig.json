@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outFile": "../../dist/protokit/scripts/protokit.js",
+    "module": "commonjs",
+    "target": "es5",
+    "declaration": true ,
+    "declarationDir": "./" ,
+    "sourceMap": true ,
+    "rootDir": "./"
+  },
+  "filesGlob": [
+    "./typings/**/*.ts" ,
+    "./node_modules/@types/**/*.ts"
+  ],
+  "files": [
+    "main.ts"
+    ]
+}

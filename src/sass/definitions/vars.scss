@@ -1,0 +1,38 @@
+/** COLORS **/
+$color-background: #222;
+$color-default: #000;
+$color-link: #e20074;
+$color-link-selected: #e20074;
+$color-link-dark: #e20074;
+$color-borders: #eee;
+
+$color-scrollSelector-bar-default: #fff;
+$color-scrollSelector-bar-blocked: #f00;
+
+/** FONTS **/
+$font-copy: "Helvetica", "Segoe UI", sans-serif;
+$font-header: "Helvetica", "Segoe UI", sans-serif;
+
+/** LAYOUT **/
+$gutter-default: 2rem;
+$gutter-default-mobile: 1rem;
+
+$desktop-navbar-height: 86px;
+$desktop-navbar-height-minimized: 60px;
+
+$mobile-screen-width: 320px;
+$mobile-screen-height: 568px;
+$mobile-navbar-height: 86px;
+$mobile-navbar-height-minimized: 60px;
+
+$navbar-height: $mobile-navbar-height;
+$navbar-height-minimized: $mobile-navbar-height-minimized;
+
+/** Z-INDEX **/
+$z-screen: 100;
+$z-navbar: 400;
+$z-modal: 900;
+$z-cursor: 99999;
+
+// NOTE: $z-hotspot gets added to the z value of whatever component it's in
+$z-hotspot: 99;

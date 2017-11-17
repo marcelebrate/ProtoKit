@@ -1,0 +1,90 @@
+@mixin breakpoint($point) {
+	@if $point == desktop {
+		@media screen { @media (min-width: 601px) { @content ; } }
+	}
+/*
+	@else if $point == laptop {
+		@media screen { @media (min-width: 64em) { @content ; } }
+	}
+	@else if $point == tablet {
+		@media screen { @media (min-width: 800px) { @content ; } }
+	}
+	@else if $point == phablet {
+		@media (min-width: 600px)  { @content ; }
+	}
+*/
+	@else if $point == mobile {
+		@media screen { @media (max-width: 600px) and (orientation: portrait)  { @content ; } }
+	}
+}
+
+@mixin vertical-align($position: relative) {
+	position: $position;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+@mixin horizontal-align($position: relative) {
+	position: $position;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}
+	@-ms-keyframes #{$animation-name} {
+		@content;
+	}
+	@-o-keyframes #{$animation-name} {
+		@content;
+	}
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+@mixin animation($str) {
+	-webkit-animation: #{$str};
+	-moz-animation: #{$str};
+	-ms-animation: #{$str};
+	-o-animation: #{$str};
+	animation: #{$str};
+}
+
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+/// Mixin to prefix several properties at once
+/// @author Hugo Giraudel
+/// @param {Map} $declarations - Declarations to prefix
+/// @param {List} $prefixes (()) - List of prefixes to print
+@mixin prefix($declarations, $prefixes: ()) {
+	@each $property, $value in $declarations {
+		@each $prefix in $prefixes {
+			#{'-' + $prefix + '-' + $property}: $value;
+		}
+
+		// Output standard non-prefixed declaration
+		#{$property}: $value;
+	}
+}

@@ -1,0 +1,225 @@
+*
+{
+	-webkit-perspective: 0px !important;
+	-webkit-backface-visibility: visible !important;
+	-webkit-font-smoothing: antialiased;
+
+	font-family: $font-copy;
+}
+
+html ,
+body
+{
+	background: $color-background;
+	position: fixed;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+body
+{
+	background: $color-background;
+	font: 76%/12pt $font-copy;
+	color: $color-default;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: none;
+}
+
+p,div,li,a,input
+{
+	font-size: .85rem;
+	line-height: 1.4rem;
+
+}
+
+p
+{
+	margin: 0 0 1rem;
+}
+
+h1
+{
+	font-family: $font-header;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+strong
+{
+	font-weight: 600;
+}
+
+a
+{
+	color: $color-link;
+	text-decoration: none;
+
+	&:hover ,
+	&:active
+	{
+		-webkit-filter: brightness(150%);
+		filter: brightness(150%);
+
+		text-decoration: underline;
+	}
+}
+.button
+{
+	@extend button
+}
+.button:active
+{
+	@extend button:active
+}
+
+button ,
+button:default
+{
+	background-color: $color-link;
+	background-repeat: no-repeat;
+	background-position: center left .3rem;
+	background-size: 1.4rem;
+	color: #fff;
+	font-family: $font-header;
+	font-size: 1rem;
+	display: inline;
+	padding: 1rem;
+	margin-top: .5rem;
+	letter-spacing: 0;
+	text-align: center;
+	text-decoration: none;
+
+	&:active ,
+	&:hover
+	{
+		-webkit-filter: brightness(120%);
+		filter: brightness(120%);
+	}
+	&:disabled
+	{
+		color: rgba(255,255,255,.3);
+	}
+}
+
+.buttonBar
+{
+	//background: $color-link-dark;
+	background: #333;
+	border: 1px solid rgba(255, 255, 255, .2);
+	border-radius: .3rem;
+
+	-webkit-box-shadow: 1px 5px 4px -3px rgba(0, 0, 0, 0.41);
+	-moz-box-shadow: 1px 5px 4px -3px rgba(0, 0, 0, 0.41);
+	box-shadow: 1px 5px 4px -3px rgba(0, 0, 0, 0.41);
+
+	display: block;
+	margin: 0;
+	padding: 0 0 .1rem 0;
+
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+
+	button ,
+	a.button
+	{
+		background: none;
+		border-right: 1px solid rgba(255, 255, 255, .2);
+		display: inline-block;
+		margin-right: -.2rem;
+
+		background: no-repeat center left .6rem;
+		background-size: 1.2rem;
+		//padding-left: 1.6rem;
+	}
+	button:hover,
+	a.button:hover
+	{
+	}
+	button:disabled,
+	a.button:disabled
+	{
+		opacity: .3;
+		color: #fff;
+	}
+	button:last-child,
+	a.button:last-child
+	{
+		border: 0;
+		margin-right: 0;
+	}
+}
+
+input,button,a,section,article,p
+{
+	box-sizing: border-box;
+}
+
+section
+{
+	overflow: hidden;
+}
+
+.blur
+{
+	filter: blur(3px);
+}
+
+.imageContainer
+{
+	background-size: 100%;
+	position: relative;
+	img
+	{
+		visibility: hidden;
+		width: 100%;
+	}
+}
+
+#app-wrapper
+{
+	background: #fff;
+
+	height: 100%;
+
+	position: relative;
+
+	margin: 0 auto;
+
+	>.content
+	{
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+	}
+
+	&.mobile
+	{
+		@include breakpoint(desktop)
+		{
+			@include vertical-align();
+
+			width: $mobile-screen-width;
+			height: $mobile-screen-height;
+
+			&::after
+			{
+				content: '';
+				background: url('../images/devices/iphone6_white.png') no-repeat;
+				background-size: 100%;
+				width: 367px;
+				height: 842px;
+
+				position: absolute;
+				left: -23px;
+				top: -90px;
+				z-index: -1;
+			}
+		}
+	}
+}
