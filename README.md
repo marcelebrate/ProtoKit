@@ -6,6 +6,20 @@
 
 The prototyping library is a TypeScript/Angular-based JavaScript library to ease development of rapid prototypes, from glorified screenshot click-thrus to more robust, high fidelity interactive prototypes.
 
+## Feature Backlog
+
+* Add authentication
+* Create image preloader @done
+* Add expiration
+* Custom background colors for hotspots when active
+* Define custom animations
+* Add delays between screen (with loader)
+* Screen states @done
+
+## Known Issues
+
+* Browser forward button shows back animation
+
 ## Requirements
 
 ### TypeScript 2
@@ -38,8 +52,8 @@ Angular was chosen for its power in databinding and in simplifying HTML by means
 
 To use the library, include the following lines in your HTML:
 
-	<link rel="stylesheet" type="text/css" href="protokit/styles/protokit.min.css" media="all" />
-	<script type="text/javascript" src="protokit/scripts/protokit.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/protokit/styles/protokit.min.css" media="all" />
+	<script type="text/javascript" src="assets/protokit/scripts/protokit.min.js"></script>
 	
 You will also need the following JavaScript libraries:
 
@@ -158,3 +172,4 @@ must be wrapped in a `<hotspots>` tag. Hotspots can be nested within a `<state>`
 * `width` : Width of the hotspot. This is a string and can be in px, em or other CSS units.
 * `position` : CSS position (e.g. `absolute`, `fixed`, etc.). Default is `absolute`
 * `action` : Code action to take when the user clicks on the hotspot. This can change states, screens or other actions.
+
